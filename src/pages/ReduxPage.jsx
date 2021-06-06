@@ -14,18 +14,32 @@ function ReduxPage() {
       unsubscribe();
     };
   }, []);
+
   // add
   const handAdd = () => {
     store.dispatch({ type: "ADD", payload: 2 });
   };
+
+  // async add
+  const handAsyncMinus = () => {
+    store.dispatch((dispatch, getState) => {
+      setTimeout(() => {
+        dispatch({
+          type: "MINUS",
+          payload: 1
+        });
+      }, 1000);
+    });
+  };
+
   return (
     <div>
       <h3>ReduxPage</h3>
-      <p>{store.getState()}</p>
+      <p>{store.getState().count}</p>
       <button className="add" onClick={handAdd}>
         add
       </button>
-      <button>asycAdd</button>
+      <button onClick={handAsyncMinus}>asycMinus</button>
     </div>
   );
 }
