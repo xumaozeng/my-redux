@@ -1,9 +1,14 @@
-import ReduxPage from "./pages/ReduxPage";
+// import ReduxPage from "./pages/ReduxPage";
+import { Provider } from "./store/react-redux";
+import store from "./store";
+import ReactReduxPage from "./pages/ReactReduxPage";
 
 function App() {
   return (
     <div className="App">
-      <ReduxPage />
+      <Provider store={store}>
+        <ReactReduxPage />
+      </Provider>
     </div>
   );
 }

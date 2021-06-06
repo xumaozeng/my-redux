@@ -18,6 +18,7 @@ export default function useSelector(selector) {
     return () => {
       unsubscribe();
     };
+    // eslint-disable-next-line
   }, [store]);
 
   return selectorState;

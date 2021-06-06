@@ -3,6 +3,7 @@ export function bindActionCreators(creators, dispatch) {
   for (const key in creators) {
     obj[key] = bindActionCreator(creators[key], dispatch);
   }
+  return { ...obj, dispatch };
 }
 
 function bindActionCreator(creator, dispatch) {

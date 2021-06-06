@@ -40,6 +40,7 @@ export const connect =
       return () => {
         unsubscribe();
       };
+      // eslint-disable-next-line
     }, [store]);
 
     return <WrappedComponent {...props} {...stateProps} {...dispatchProps} />;
