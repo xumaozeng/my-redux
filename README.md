@@ -19,7 +19,7 @@
   - redux-thunk
   - redux-logger
 
-拓展react-redux源码，提供了connect和Provider两个最重要的API还有一些Hooks
+拓展[react-redux](https://github.com/reduxjs/react-redux)源码，提供了connect和Provider两个最重要的API还有一些Hooks
 
 - connect
 - Provider
