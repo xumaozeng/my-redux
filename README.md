@@ -14,3 +14,15 @@
   - state
   - subscribe
 
+- combineReducers
+- applyMiddleware
+  - redux-thunk
+  - redux-logger
+
+拓展react-redux源码，提供了connect和Provider两个最重要的API还有一些Hooks
+
+- connect
+- Provider
+- useDispatch
+- useSelector
+- bindActionCreators
